@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Login.master.cs" Inherits="Its_your_Health.Login1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+          
+      
+        body{
+            background-image:url('../Resources/back.jpg');
+         background-size:cover;
+         margin-left: auto; 
+         margin-right: auto;
+         width: 980px;
+
+            
+        }
+        .auto-style2 {
+            text-align: right;
+        }
+        .auto-style1 {
+            width: 258px;
+            height: 127px;
+            float: left;
+        }
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+   
+            <p class="auto-style2">
+                    <img alt="" class="auto-style1" src="Resources/logo.png" /><asp:TextBox ID="TextBox1" runat="server" Text="Search"></asp:TextBox>
+                </p>
+            <p class="auto-style2">
+                    Welcome<asp:Label ID="lblName" runat="server" Text="User Name here"></asp:Label>
+&nbsp;</p>
+          
+
+                <p class="auto-style2"> </p>
+            <div style="background-size: 100%;">
+                <asp:Menu ID="Menu1" Orientation="Horizontal" runat="server" BackColor="#E3EAEB" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#666666" StaticSubMenuIndent="10px">
+                    <DynamicHoverStyle BackColor="#666666" ForeColor="White" />
+                    <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <DynamicMenuStyle BackColor="#E3EAEB" />
+                    <DynamicSelectedStyle BackColor="#1C5E55" />
+                    <Items>
+                        <asp:MenuItem Text="About Us" Value="About Us" NavigateUrl="~/AboutUs.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Contact Us" Value="Contact Us" NavigateUrl="~/ContactUs.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Logout" Value="Logout" NavigateUrl="~/HomePage.aspx"></asp:MenuItem>
+                    </Items>
+                    <StaticHoverStyle BackColor="#666666" ForeColor="White" />
+                    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <StaticSelectedStyle BackColor="#1C5E55" />
+                </asp:Menu>
+                <br />
+            </div>
+                         <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

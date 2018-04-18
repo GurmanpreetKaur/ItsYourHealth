@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Its_Your_Health.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    <style type="text/css">
+      
+        body{
+            background-image:url('../Resources/back.jpg');
+         background-size:cover;
+         margin-left: auto; 
+         margin-right: auto;
+         width: 980px;
+
+            
+        }
+        div{
+             
+           background-size:100%;
+        }
+    h1{
+        color:azure;
+        font-size:xx-large;
+        padding-top: 2em;
+        font-family:Algerian;
+        font-style:italic;
+    }
+        .auto-style1 {
+            width: 258px;
+            height: 127px;
+            float: left;
+        }
+        .auto-style2 {
+            text-align: right;
+        }
+    </style>
+
+</head>
+<body >
+    <form id="form1" runat="server">
+        <div>
+            <p class="auto-style2">
+                    <img alt="" class="auto-style1" src="Resources/logo.png" /><asp:TextBox ID="TextBox1" runat="server" Text="Search"></asp:TextBox>
+          
+
+                <p class="auto-style2">
+            <div class="auto-style2">
+                <asp:Menu ID="Menu1" Orientation="Horizontal" runat="server" BackColor="#E3EAEB" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#666666" StaticSubMenuIndent="10px">
+                    <DynamicHoverStyle BackColor="#666666" ForeColor="White" />
+                    <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <DynamicMenuStyle BackColor="#E3EAEB" />
+                    <DynamicSelectedStyle BackColor="#1C5E55" />
+                    <Items>
+                        <asp:MenuItem Text="Home" Value="Home"></asp:MenuItem>
+                        <asp:MenuItem Text="About Us" Value="About Us"></asp:MenuItem>
+                        <asp:MenuItem Text="Information" Value="Information"></asp:MenuItem>
+                        <asp:MenuItem Text="Contact Us" Value="Contact Us"></asp:MenuItem>
+                    </Items>
+                    <StaticHoverStyle BackColor="#666666" ForeColor="White" />
+                    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <StaticSelectedStyle BackColor="#1C5E55" />
+                </asp:Menu>
+            </div>
+                    <table style="width: 100%;">
+                        <tr>
+                            <td>
+                <p>
+                    &nbsp;</p>
+                <p>
+                    <asp:Button ID="btnLoginPage" runat="server" OnClick="btnLoginPage_Click"  Text="Login" />
+                </p>
+                <p>
+                    &nbsp;</p>
+                <p>
+          Health Tips</p>
+                <p>
+                    <asp:TextBox ID="txtHealthTips" runat="server" Height="106px" Width="195px" TextMode="MultiLine"  ></asp:TextBox>
+                </p>
+                            </td>
+                            <td>
+
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                
+               
+             
+                
+            </asp:ContentPlaceHolder>
+                            </td>
+                        </tr>
+            </table>
+                    </p>
+        </div>
+
+
+    </form>
+         
+</body>
+</html>
